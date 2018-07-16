@@ -26,9 +26,11 @@
 
 -(IBAction)shareURLToOmletArcade:(id)sender {
     NSURL *URLToShare = [NSURL URLWithString:@"http://google.com?q=123&a=345"];
-    NSURL *callback = [NSURL URLWithString:@"omletarcadedemo://"];
+    NSURL *callback = [NSURL URLWithString:@"omletarcadedemo://"]; // optional
     BOOL success = [OMLArcadeShareKit shareURL:URLToShare callbackURL:callback];
-    NSLog(@"share success: %@", @(success));
+    if (!success) {
+        [OMLArcadeShareKit openArcadeInAppStore];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

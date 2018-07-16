@@ -16,13 +16,13 @@
     return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:ARCADE_URL_BASE]];
 }
 
++ (void)openArcadeInAppStore {
+    NSURL *appStoreURL = [NSURL URLWithString:@"https://itunes.apple.com/us/app/omlet-arcade/id1152185878?mt=8"];
+    [[UIApplication sharedApplication] openURL:appStoreURL];
+}
 
 + (BOOL)shareURL:(NSURL *_Nonnull)url callbackURL:(NSURL *_Nullable)callbackURL {
     if (!url) {
-        return NO;
-    }
-    
-    if (![self isInstalled]) {
         return NO;
     }
 

@@ -11,6 +11,8 @@
 
 +(BOOL)isInstalled;
 
++(void)openArcadeInAppStore;
+
 + (BOOL)shareURL:(NSURL *_Nonnull)url callbackURL:(NSURL *_Nullable)callbackURL;
 
 @end
