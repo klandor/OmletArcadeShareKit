@@ -13,6 +13,7 @@
 		855023BA20FAF7CA00FF3E4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 855023B920FAF7CA00FF3E4D /* Assets.xcassets */; };
 		855023BD20FAF7CA00FF3E4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 855023BB20FAF7CA00FF3E4D /* LaunchScreen.storyboard */; };
 		855023C020FAF7CA00FF3E4D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 855023BF20FAF7CA00FF3E4D /* main.m */; };
+		855023C920FB777D00FF3E4D /* OMLArcadeShareKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 855023C820FB777D00FF3E4D /* OMLArcadeShareKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		855023BC20FAF7CA00FF3E4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		855023BE20FAF7CA00FF3E4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		855023BF20FAF7CA00FF3E4D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		855023C720FB777D00FF3E4D /* OMLArcadeShareKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMLArcadeShareKit.h; sourceTree = "<group>"; };
+		855023C820FB777D00FF3E4D /* OMLArcadeShareKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OMLArcadeShareKit.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		855023A420FAF7C800FF3E4D = {
 			isa = PBXGroup;
 			children = (
+				855023C620FAFFC200FF3E4D /* OMLArcadeShareKit */,
 				855023AF20FAF7C800FF3E4D /* ArcadeShareDemo */,
 				855023AE20FAF7C800FF3E4D /* Products */,
 			);
@@ -69,6 +73,15 @@
 				855023BF20FAF7CA00FF3E4D /* main.m */,
 			);
 			path = ArcadeShareDemo;
+			sourceTree = "<group>";
+		};
+		855023C620FAFFC200FF3E4D /* OMLArcadeShareKit */ = {
+			isa = PBXGroup;
+			children = (
+				855023C720FB777D00FF3E4D /* OMLArcadeShareKit.h */,
+				855023C820FB777D00FF3E4D /* OMLArcadeShareKit.m */,
+			);
+			path = OMLArcadeShareKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				855023C920FB777D00FF3E4D /* OMLArcadeShareKit.m in Sources */,
 				855023B520FAF7C800FF3E4D /* ViewController.m in Sources */,
 				855023C020FAF7CA00FF3E4D /* main.m in Sources */,
 				855023B220FAF7C800FF3E4D /* AppDelegate.m in Sources */,
@@ -286,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CSA2U5KAPZ;
 				INFOPLIST_FILE = ArcadeShareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -303,6 +318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CSA2U5KAPZ;
 				INFOPLIST_FILE = ArcadeShareDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
