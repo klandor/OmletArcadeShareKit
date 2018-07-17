@@ -17,7 +17,7 @@
 }
 
 + (void)openArcadeInAppStore {
-    NSURL *appStoreURL = [NSURL URLWithString:@"https://itunes.apple.com/us/app/omlet-arcade/id1152185878?mt=8"];
+    NSURL *appStoreURL = [NSURL URLWithString:@"http://onelink.to/vfwmwk"];
     [[UIApplication sharedApplication] openURL:appStoreURL];
 }
 
