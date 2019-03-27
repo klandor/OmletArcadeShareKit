@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,27 +18,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="rXR-ee-r5k">
-                                <rect key="frame" x="109" y="304" width="156" height="59.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="rXR-ee-r5k">
+                                <rect key="frame" x="19" y="288.5" width="337.5" height="90"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="loV-lo-bQR">
-                                        <rect key="frame" x="0.0" y="0.0" width="156" height="30"/>
+                                        <rect key="frame" x="90.5" y="0.0" width="156" height="30"/>
                                         <state key="normal" title="Share to Omlet Arcade"/>
                                         <connections>
                                             <action selector="shareURLToOmletArcade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O5T-4b-rMA"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iz7-S4-cmo">
-                                        <rect key="frame" x="57" y="39" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDt-Ws-1ZT">
+                                        <rect key="frame" x="56.5" y="60" width="224" height="30"/>
+                                        <state key="normal" title="Start Streaming to Omlet Arcade"/>
+                                        <connections>
+                                            <action selector="startStreamingWithOmletArcade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ChE-oD-yNd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="rXR-ee-r5k" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.9" id="Dn3-MU-hEj"/>
                             <constraint firstItem="rXR-ee-r5k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="POz-R5-GZb"/>
                             <constraint firstItem="rXR-ee-r5k" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fdG-sE-WzG"/>
                         </constraints>

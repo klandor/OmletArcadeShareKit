@@ -33,6 +33,14 @@
     }
 }
 
+-(IBAction)startStreamingWithOmletArcade:(id)sender {
+    NSURL *URLToShare = [NSURL URLWithString:@"http://google.com?q=123&a=345"];
+    BOOL success = [OMLArcadeShareKit startLiveWithJoinableURL:URLToShare];
+    if (!success) {
+        [OMLArcadeShareKit openArcadeInAppStore];
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

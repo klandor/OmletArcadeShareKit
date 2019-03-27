@@ -9,6 +9,7 @@
 
 #define ARCADE_URL_BASE @"omletarcade://"
 #define ARCADE_SHARE_CONTENT_URL @"omletarcade://share/content?"
+#define ARCADE_START_LIVE_URL @"omletarcade://startlive"
 
 @implementation OMLArcadeShareKit
 
@@ -26,14 +27,11 @@
         return NO;
     }
 
-    NSMutableCharacterSet *URLQueryPartAllowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
-    [URLQueryPartAllowedCharacterSet removeCharactersInString:@"&+=?"];
-    
-    NSString *URLStringEscaped = [url.absoluteString stringByAddingPercentEncodingWithAllowedCharacters:URLQueryPartAllowedCharacterSet];
+    NSString *URLStringEscaped = [OMLArcadeShareKit urlEscapedStringFromString:url.absoluteString];
     NSString *query = [@"url=" stringByAppendingString:URLStringEscaped];
 
     if (callbackURL) {
-        NSString *callbackURLStringEscaped = [callbackURL.absoluteString stringByAddingPercentEncodingWithAllowedCharacters:URLQueryPartAllowedCharacterSet];
+        NSString *callbackURLStringEscaped = [OMLArcadeShareKit urlEscapedStringFromString:callbackURL.absoluteString];
         query = [NSString stringWithFormat:@"%@&callback=%@", query, callbackURLStringEscaped];
     }
     
@@ -41,6 +39,25 @@
     NSURL *finalURL = [NSURL URLWithString:finalURLString];
 
     return [[UIApplication sharedApplication] openURL:finalURL];
+}
+
++ (BOOL)startLiveWithJoinableURL:(NSURL *_Nullable)url {
+    NSURL *startLiveURL = [NSURL URLWithString:ARCADE_START_LIVE_URL];
+    if (url) {
+        NSString *URLStringEscaped = [OMLArcadeShareKit urlEscapedStringFromString:url.absoluteString];
+        NSString *query = [@"url=" stringByAppendingString:URLStringEscaped];
+        __auto_type components = [NSURLComponents componentsWithURL:startLiveURL resolvingAgainstBaseURL:NO];
+        components.query = query;
+        startLiveURL = components.URL;
+    }
+    return [[UIApplication sharedApplication] openURL:startLiveURL];
+}
+
++ (NSString *)urlEscapedStringFromString:(NSString *)string {
+    NSMutableCharacterSet *URLQueryPartAllowedCharacterSet = [[NSCharacterSet URLQueryAllowedCharacterSet] mutableCopy];
+    [URLQueryPartAllowedCharacterSet removeCharactersInString:@"&+=?"];
+
+    return [string stringByAddingPercentEncodingWithAllowedCharacters:URLQueryPartAllowedCharacterSet];
 }
 
 @end

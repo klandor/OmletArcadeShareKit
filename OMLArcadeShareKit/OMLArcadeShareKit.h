@@ -15,4 +15,6 @@
 
 + (BOOL)shareURL:(NSURL *_Nonnull)url callbackURL:(NSURL *_Nullable)callbackURL;
 
++ (BOOL)startLiveWithJoinableURL:(NSURL *_Nullable)url;
+
 @end
